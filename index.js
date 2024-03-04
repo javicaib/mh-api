@@ -1,6 +1,6 @@
+import cors from "cors";
 import express from "express";
 import { findAllMonsters, findByMonsters } from "./mongo.js";
-
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -38,7 +38,7 @@ app.get('/search', (req, res) => {
 }
 
 );
-
+app.use(cors)
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 server.keepAliveTimeout = 120 * 1000;
