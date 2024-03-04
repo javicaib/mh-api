@@ -38,7 +38,7 @@ app.get('/search', (req, res) => {
 }
 
 );
-app.use(cors)
+app.use(cors())
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 server.keepAliveTimeout = 120 * 1000;
