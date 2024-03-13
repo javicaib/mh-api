@@ -6,7 +6,7 @@ console.log(dotenv);
 
 
 try {
-    mongoose.connect(process.env.MONGO_URI).then(() => console.log("DB CONNECT"))
+    mongoose.connect(process.env.MONGO_URI_DEV).then(() => console.log("DB CONNECT"))
 } catch (error) {
     console.log(error)
 }
